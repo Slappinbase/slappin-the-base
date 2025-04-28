@@ -1,0 +1,27 @@
+{
+  "name": "Slappin The Base Dev Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "juanblanco.solidity", // Solidity extension
+        "ms-vscode.vscode-typescript-next",
+        "mhutchie.git-graph",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "ports": [
+    {
+      "containerPort": 3000,
+      "hostPort": 3000,
+      "protocol": "tcp"
+    }
+  ],
+  "remoteUser": "node"
+}
