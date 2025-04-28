@@ -1,0 +1,8 @@
+# Base image for Node.js
+FROM mcr.microsoft.com/devcontainers/javascript-node:20
+
+# Install additional tools (e.g., Solidity compiler, Hardhat)
+RUN npm install -g hardhat truffle
+
+# Expose ports
+EXPOSE 3000
